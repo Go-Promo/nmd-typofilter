@@ -27,11 +27,24 @@ $('.js-typofilter').nmdTypofilter()
 Типограф применяется ко всем `input[type="text"], textarea` внутри DOM-элемента с классом `js-typofilter`.
 Запуск типографа происходит по клику на элемент с классом `js-typofilter-btn` внутри DOM-элемента `js-typofilter`.
 
-Пример использования типографа для input-а с заголовком новости (HAML-синтаксис)
+Пример использования типографа для input-а с заголовком новости (кнопка стоит около label)
 ```haml
 .control-group.js-typofilter
   .control-label
     = f.label :title
+    %a.btn.js-typofilter-btn{href: "#", title: 'Применить типограф'}
+      %i.icon-text-width
+  .controls
+    = f.text_area :title, class: :span12, rows: 4, maxlength: 255
+```
+
+Второй пример (кнопка стоит рядом с input)
+```haml
+.control-group
+  .control-label
+    = f.label :title
+  .controls.js-symbol-counter.js-typofilter
+    = f.text_field :title, class: 'span9', maxlength: 110
     %a.btn.js-typofilter-btn{href: "#", title: 'Применить типограф'}
       %i.icon-text-width
 ```
