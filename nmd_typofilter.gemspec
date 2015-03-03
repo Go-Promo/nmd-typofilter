@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Initialize Typofilter jQuery-plugin"
   s.description = "Initialize Typofilter jQuery-plugin"
 
-  s.files = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{lib,vendor}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails"
   s.add_dependency "jquery-rails"
